@@ -1,3 +1,39 @@
+<!-- <form action="/users" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="">
+    <div class="form-group">
+        <label for="user_username">Username:</label>
+        <input placeholder="eg. Jane Doe" minlength="3" maxlength="12" class="form-control" type="text" name="user[username]" required id="user_username">
+    </div>
+    <div class="form-group">
+        <label for="user_email">Write email:</label>
+        <input placeholder="eg. John@doe.com" minlength="3" maxlength="36" class="form-control" type="email" name="user[email]" required id="user_email">
+    </div>
+    <div class="form-group">
+        <label for="user_password">Write password:</label>
+        <input placeholder="eg. 123456" minlength="3" maxlength="12" class="form-control" type="password" name="user[password]" required id="user_password">
+    </div>
+    <div class="text-center">
+        <a class="btn btn-secondary" href="/">back</a>
+        <input type="submit" name="commit" value="Create User" class="btn btn-primary" data-disable-with="Create User">
+    </div>
+    </form> -->
+
+<%
+=begin%>
+ 
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %>
+   <%= label_tag(:email, "Email:") %>
+  <%= email_field_tag(:email) %>
+   <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %>
+  <%= submit_tag("Create User") %>
+<% end %> 
+<%
+=end%>
+
+
+
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
