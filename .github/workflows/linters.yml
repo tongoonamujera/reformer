@@ -33,5 +33,10 @@ jobs:
       - name: Stylelint Report
         run: npx stylelint "**/*.{css,scss}"
   AllCops:
-    Exclude:
-      -'Gemfile'
+    Includes:
+      - Rakefile
+      - config.ru
+    Excludes:
+      - db/**
+      - config/**
+      - script/**
