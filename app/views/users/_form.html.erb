@@ -1,20 +1,26 @@
 <!-- <form action="/users" accept-charset="UTF-8" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
-    <div class="form-group">
-        <label for="user_username">Username:</label>
-        <input placeholder="eg. Jane Doe" minlength="3" maxlength="12" class="form-control" type="text" name="user[username]" required id="user_username">
+    <div class="field">
+        <label for="user_username" class="label">Username:</label>
+        <div class="control">
+          <input placeholder="eg. Jane Doe" minlength="3" maxlength="12" class="input" type="text" name="user[username]" required id="user_username">
+        </div>
     </div>
-    <div class="form-group">
-        <label for="user_email">Write email:</label>
-        <input placeholder="eg. John@doe.com" minlength="3" maxlength="36" class="form-control" type="email" name="user[email]" required id="user_email">
+    <div class="field">
+        <label for="user_email" class="label">Email:</label>
+        <div class="control">
+          <input placeholder="eg. John@doe.com" minlength="3" maxlength="36" class="input" type="email" name="user[email]" required id="user_email">
+        </div>
     </div>
-    <div class="form-group">
-        <label for="user_password">Write password:</label>
-        <input placeholder="eg. 123456" minlength="3" maxlength="12" class="form-control" type="password" name="user[password]" required id="user_password">
+    <div class="field">
+        <label for="user_password" class="label">Password:</label>
+        <div class="control">
+          <input placeholder="eg. 123456" minlength="3" maxlength="12" class="input" type="password" name="user[password]" required id="user_password">
+        </div>
     </div>
     <div class="text-center">
-        <a class="btn btn-secondary" href="/">back</a>
-        <input type="submit" name="commit" value="Create User" class="btn btn-primary" data-disable-with="Create User">
+        <a class="button is-success" href="/">back</a>
+        <input type="submit" name="commit" value="Create User" class="button is-success" data-disable-with="Create User">
     </div>
     </form> -->
 
