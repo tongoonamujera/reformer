@@ -1,5 +1,7 @@
 # RE-FORMER
 > In this project, i have built a basic a form from scratch  using Ruby on Rails
+## Project Screenshot
+![projectscreenshot](https://user-images.githubusercontent.com/69446259/128926233-9a5b4f80-370d-4c3e-89ef-540e711a8069.png)
 ## Built With
 
 - Ruby
