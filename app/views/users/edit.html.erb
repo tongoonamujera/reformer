@@ -1,6 +1,17 @@
-<h1>Editing User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <h1>Editing <%= @user.username.upcase %>'s information </h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', user: @user %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Back', users_path, class:"button is-dark" %>
+      </footer>
+    </div>
+  </div>
+</div>
