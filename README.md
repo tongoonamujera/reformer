@@ -29,9 +29,9 @@ To get a local copy up and running, follow these simple example steps.
 - Run `rails new reformer` from your terminal to create a new rails app
   - This command will create a number of files and the default db will be SQLite3
 - Run cd `cd reformer` to navigate to your project directory
-- Run `rails g model user email username password`on your Terminal and this will generate all the files particularly the model, controller and the views
+- Run `rails g model user email username password`on your Terminal and this will generate all the files particularly the model
 - Run `rails db:migrate` from your Terminal to create a database migration
-Run `rails g controller users create new` on your terminal to create a comment scaffold
+- Run `rails g controller users create new` on your terminal to create a controller for users
 - Run `code .` if you are using Visual Studio Code or `atom` if you are using Atom or `subl` if you are using Sublime to open your text editor
 - In your code editor go to the Gemfile and add the following gems `gem bulma-rails`
 - Run `bundle` from your terminal to install gems to you project
