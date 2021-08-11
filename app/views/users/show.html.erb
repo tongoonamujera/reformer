@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <h1>Showing <%= @user.username %>'s information</h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>
+            <strong>Email:</strong>
+            <%= @user.email %>
+          </p>
+
+          <p>
+            <strong>Password:</strong>
+            <%= @user.password %>
+          </p>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Edit', edit_user_path(@user) %> |
+        <%= link_to 'Back', users_path %>
+      </footer>
+    </div>
+  </div>
+</div>

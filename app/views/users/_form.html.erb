@@ -1,0 +1,81 @@
+<!-- <form action="/users" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+    <div class="field">
+        <label for="user_username" class="label">Username:</label>
+        <div class="control">
+          <input placeholder="eg. Jane Doe" minlength="3" maxlength="12" class="input" type="text" name="user[username]" required id="user_username">
+        </div>
+    </div>
+    <div class="field">
+        <label for="user_email" class="label">Email:</label>
+        <div class="control">
+          <input placeholder="eg. John@doe.com" minlength="3" maxlength="36" class="input" type="email" name="user[email]" required id="user_email">
+        </div>
+    </div>
+    <div class="field">
+        <label for="user_password" class="label">Password:</label>
+        <div class="control">
+          <input placeholder="eg. 123456" minlength="3" maxlength="12" class="input" type="password" name="user[password]" required id="user_password">
+        </div>
+    </div>
+    <div class="text-center">
+        <a class="button is-success" href="/">back</a>
+        <input type="submit" name="commit" value="Create User" class="button is-success" data-disable-with="Create User">
+    </div>
+    </form> -->
+
+<%
+=begin%>
+ 
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %>
+   <%= label_tag(:email, "Email:") %>
+  <%= email_field_tag(:email) %>
+   <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %>
+  <%= submit_tag("Create User") %>
+<% end %> 
+<%
+=end%>
+
+
+
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username, class:"label" %>
+    <div class="control">
+      <%= form.text_field :username, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, class:"label" %>
+    <div class="control">
+      <%= form.text_field :email, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :password, class:"label" %>
+    <div class="control">
+      <%= form.text_field :password, class:"input" %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-success" %>
+  </div>
+<% end %>

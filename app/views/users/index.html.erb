@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns is-centered">
+  <div class="column is-8">
+  <% @users.each do |user| %>
+    <div class="card m-5">
+      <header class="card-header">
+        <h1>Viewing <%= user.username.upcase %>'s information </h1>
+      </header>
+        <div class="card-content has-background-light">
+          <div class="content">
+            <%= user.email %><br>
+            <%= user.password %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item">
+            <%= link_to 'Show', user, class:"button is-success" %>
+          </div>
+          <div class="card-footer-item">
+            <%= link_to 'Edit', edit_user_path(user), class:"button is-success" %>
+          </div>
+          <div class="card-footer-item">
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-danger" %>
+          </div>
+        </footer>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'New User', new_user_path, class:"button is-success" %>
